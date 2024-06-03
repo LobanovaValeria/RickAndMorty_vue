@@ -29,8 +29,6 @@ export default {
   
   methods: {
     onChangePage(page){
-            console.log(page)
-
       this.currentPage=page;
       this.fetchCharacters(page);
     },
@@ -40,10 +38,7 @@ export default {
       this.fetchCharacters(1 ,this.queryName, this.queryStatus);
     },
     async fetchCharacters(page, name, status) {
-      console.log(page, name);
       let qPage=page===undefined?this.changePage:page;
-      let qName=name===undefined?"":name;
-      let qStatus=status===undefined?"":status;
       try {
         this.isLoading=true;
         const response= await axios({

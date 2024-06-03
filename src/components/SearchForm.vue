@@ -32,7 +32,6 @@ export default {
   methods: {
     nameAndStatus() {
       this.$emit('queryParameters', this.nameCharacter, this.selectOption);
-      console.log(this.nameCharacter, this.selectOption);
     },
   },
 };
